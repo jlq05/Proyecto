@@ -1,0 +1,12 @@
+{
+    "name" : "thegameofthebatman",
+    "main": "index.js",
+    "engines":{
+        "node":"10"
+    },
+    "scripts": {
+        "start":"node index.js"
+    }
+
+
+}
