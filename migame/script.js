@@ -4,11 +4,7 @@ if(e.keyCode == 32){
     
     if(nivel.muerto == false)
     saltar();
-    else {
-       
-        puntuacion = 0;
-        
-    }
+    
 }
 
 
@@ -50,8 +46,8 @@ function borrarCanvas(){
    canvas.height = alto;
 }
 var suelo = 423;
-var bruja = {y: suelo, vy:0, gravedad:1, salto:28, vymax:9, saltando: false};
-var nivel = {velocidad: 30,  muerto: false};
+var bruja = {y: suelo, vy:0, gravedad:0.6, salto:17, vymax:9, saltando: false};
+var nivel = {velocidad: 10,  muerto: false};
 var puntuacion = 0;
 var bat = {x:ancho + 100, y: suelo-0};
 
@@ -113,13 +109,13 @@ if(bat.x >= 100 && bat.x <= 165){
 
 function puntaje(){
     ctx.font = "30px impact";
-    ctx.fillStyle = "555555";
+    ctx.fillStyle = "#ffffff";
     
 
     if(nivel.muerto == true){
         ctx.font = "60px impact";
         ctx.fillText( `GAME OVER`, 440, 250);
-        ctx.fillText( `${puntuacion} `,600,50);
+        ctx.fillText( `${puntuacion} `,560,50);
         console.log(puntuacion);
         window.location.assign("https://thegameofbatman.herokuapp.com/")
     }
