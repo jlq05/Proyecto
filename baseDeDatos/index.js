@@ -21,13 +21,12 @@ ClienteMongo.connect(url, async function(err, cliente) {
   console.log("Connected successfully to server");
   var db = cliente.db(nombre_base_datos);
   // await jugarConMongo(db);
-   await db.collection('alumnos').insertOne( { nombre: "norman"})
+   await db.collection('alumnos').insertOne( { nombre: "nombre"})
     var alumnos =  await db.collection('alumnos').find().toArray()
     console.log(alumnos)
   cliente.close();
 } );
 
-module.exports = ClienteMongo;
 
 //async function jugarConMongo(db) {
     
