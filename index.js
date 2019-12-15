@@ -1,8 +1,8 @@
 var express = require('express')
 
-var ClienteMongo = require('./baseDeDatos/index')
+//var ClienteMongo = require('./baseDeDatos/index')
 
-ClienteMongo()
+//ClienteMongo()
 
 var app = express()
 

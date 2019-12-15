@@ -1,5 +1,5 @@
 document.addEventListener('keydown', function(e){
-if(e.keyCode == 32){
+if(e.keyCode == "32"){
     console.log("saltar");
     
     if(nivel.muerto == false)
@@ -11,12 +11,12 @@ if(e.keyCode == 32){
     
 }
 
-
 });
 
 
 var imgBruja;
 var ImgBat;
+
 
 function cargarImagenes() {
     imgBruja = new Image();
@@ -30,7 +30,6 @@ function cargarMusica() {
     reproducir.src = "./BatmanSoundtrack.mp3";
     reproducir.play()
 }
-
 
 
 var ancho = 1180;
@@ -139,7 +138,6 @@ function principal(){
     gravedad();
     colision();
     logicaBat();
-    cargarMusica();
     dibujarBat();
     dibujarBruja();
     puntaje();
@@ -149,4 +147,4 @@ setTimeout(function() {
 	var h1= document.createElement('H1')
 	h1.innerHTML = "GAME OVER"
 	window.location.href = "./pantallaPrincipal.html"
-},60000)
+},70000)
