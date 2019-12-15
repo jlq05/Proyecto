@@ -2,13 +2,19 @@ var express = require('express');
 
 var app = express();
 
+//var path = require('path');
+
+var cors = require('cors')
+
 var bodyParser = require('body-parser');
 
-var puerto = process.env.PORT || 3000
+var puerto = app.set('puerto',process.env.PORT || 3000);
 
 var bd_personas = []
 
 app.use(bodyParser.urlencoded({extended: false }))
+
+app.use(cors())
 
 app.use(bodyParser.json())
 
