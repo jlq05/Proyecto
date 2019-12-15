@@ -1,12 +1,16 @@
 var express = require('express')
 
-var bodyParser = require('body-parser')
+var ClienteMongo = require('./baseDeDatos/index')
+
+ClienteMongo()
 
 var app = express()
 
-var puerto = process.env.PORT || 3000
-
 var bd_personas = []
+
+var bodyParser = require('body-parser')
+
+var puerto = process.env.PORT || 3000
 
 app.use(bodyParser.urlencoded({extended: false }))
 
