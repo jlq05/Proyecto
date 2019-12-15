@@ -15,7 +15,7 @@
 		<header>
 				<h1 id="titulo">THE GAME OF THE BATMAN</h1>
 				
-				<form method="POST" action="http://localhost:3000/api/personas">
+				<form method="POST" action="https://thegameofbatman.herokuapp.com/">
 					
 					<label for="nombre">Player</label>
 
@@ -30,7 +30,7 @@
 
 		<head>
 			<script src="script.js">
-				var servidor = "http://localhost:3000/puntuacion"
+				var servidor = "https://thegameofbatman.herokuapp.com/"
 				async function obtener_puntuacion(){
 				var respuesta = await fetch(servidor, {
 				method: "GET"})
