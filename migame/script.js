@@ -25,13 +25,6 @@ function cargarImagenes() {
     ImgBat.src = "./img/calavera.png";
 }
 
-function cargarMusica() {
-    const reproducir = new Audio();
-    reproducir.src = "./BatmanSoundtrack.mp3";
-    reproducir.play()
-}
-
-
 var ancho = 1180;
 var alto = 500;
 
@@ -49,8 +42,8 @@ function borrarCanvas(){
    canvas.height = alto;
 }
 var suelo = 423;
-var bruja = {y: suelo, vy:0, gravedad:0.6, salto:17, vymax:5, saltando: false};
-var nivel = {velocidad: 10,  muerto: false};
+var bruja = {y: suelo, vy:0, gravedad:0.6, salto:17, vymax:9, saltando: false};
+var nivel = {velocidad: 30,  muerto: false};
 var puntuacion = 0;
 var bat = {x:ancho + 100, y: suelo-0};
 
@@ -112,13 +105,13 @@ if(bat.x >= 100 && bat.x <= 165){
 
 function puntaje(){
     ctx.font = "30px impact";
-    ctx.fillStyle = "#ffffff";
+    ctx.fillStyle = "555555";
     
 
     if(nivel.muerto == true){
         ctx.font = "60px impact";
         ctx.fillText( `GAME OVER`, 440, 250);
-        ctx.fillText( `${puntuacion} `,560,50);
+        ctx.fillText( `${puntuacion} `,600,50);
         console.log(puntuacion);
         window.location.assign("https://thegameofbatman.herokuapp.com/")
     }
