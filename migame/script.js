@@ -4,6 +4,10 @@ if(e.keyCode == 32){
     
     if(nivel.muerto == false)
     saltar();
+
+     else {
+        puntuacion = 0;
+    }
     
 }
 
@@ -46,7 +50,7 @@ function borrarCanvas(){
    canvas.height = alto;
 }
 var suelo = 423;
-var bruja = {y: suelo, vy:0, gravedad:0.6, salto:17, vymax:9, saltando: false};
+var bruja = {y: suelo, vy:0, gravedad:0.6, salto:17, vymax:5, saltando: false};
 var nivel = {velocidad: 10,  muerto: false};
 var puntuacion = 0;
 var bat = {x:ancho + 100, y: suelo-0};
