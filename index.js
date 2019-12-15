@@ -1,16 +1,12 @@
-var express = require('express')
+var express = require('express');
 
-//var ClienteMongo = require('./baseDeDatos/index')
+var app = express();
 
-//ClienteMongo()
-
-var app = express()
-
-var bd_personas = []
-
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 
 var puerto = process.env.PORT || 3000
+
+var bd_personas = []
 
 app.use(bodyParser.urlencoded({extended: false }))
 
@@ -24,11 +20,17 @@ app.get('/api/personas',function ( _, respuesta) {
 
 app.post('/api/personas', function (consulta, respuesta) {
    // var nombre = consulta.body.Nombre
-    bd_personas.push({
-        nombre: consulta.body.nombre,
-        puntaje: consulta.body.puntaje
-    })
-    respuesta.status(201).json({})
+    var nombre = consulta.body.nombre
+    bd_personas.push(nombre)
+
+    var puntaje = consulta.body.puntaje
+    bd_personas.push(puntaje)
+   respuesta.status(201).redirect("/")
+   //bd_personas.push({
+     //   nombre: consulta.body.nombre,
+     //   puntaje: consulta.body.puntaje
+   // })
+   // respuesta.status(201).json({})
 })
 
 app.listen(puerto ,function () {
