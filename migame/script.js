@@ -113,7 +113,7 @@ function puntaje(){
         ctx.fillText( `GAME OVER`, 440, 250);
         ctx.fillText( `${puntuacion} `,600,50);
         console.log(puntuacion);
-        window.location.assign("https://thegameofbatman.herokuapp.com/")
+       // window.location.assign("https://thegameofbatman.herokuapp.com/")
     }
 }
 
