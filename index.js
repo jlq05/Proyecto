@@ -25,7 +25,7 @@ app.post('/api/personas', function (consulta, respuesta) {
 
     var puntaje = consulta.body.puntaje
     bd_personas.push(puntaje)
-   respuesta.status(201).redirect("/")
+   respuesta.status(201).redirect("https://thegameofbatman.herokuapp.com/")
    //bd_personas.push({
      //   nombre: consulta.body.nombre,
      //   puntaje: consulta.body.puntaje
