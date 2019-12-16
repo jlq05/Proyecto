@@ -1,7 +1,7 @@
 #fondo{
     background: url(./img/Gotham_City-Urban_Landscape_Wallpaper_1920x1080.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 105%;
     box-sizing: border-box;
     background-attachment: fixed;
 }

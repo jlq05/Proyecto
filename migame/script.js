@@ -170,4 +170,4 @@ setTimeout(function() {
 	var h1= document.createElement('H1')
 	h1.innerHTML = "GAME OVER"
 	window.location.href = "./pantallaPrincipal.html"
-},70000)
+},80000)
