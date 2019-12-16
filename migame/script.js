@@ -46,7 +46,7 @@ function borrarCanvas(){
 }
 var suelo = 423;
 var bruja = {y: suelo, vy:0, gravedad:0.6, salto:10, vymax:9, saltando: false};
-var nivel = {velocidad: 30,  muerto: false};
+var nivel = {velocidad: 24,  muerto: false};
 var puntuacion = 0;
 var bat = {x:ancho + 100, y: suelo-0};
 var mago = {x:ancho + 1100, y: suelo-10};
