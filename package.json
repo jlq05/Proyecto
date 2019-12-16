@@ -1,12 +1,27 @@
 {
-    "name" : "thegameofthebatman",
-    "main": "index.js",
-    "engines":{
-        "node":"10"
-    },
-    "scripts": {
-        "start":"node index.js"
-    }
-
-
+  "name": "thegameofthebatman",
+  "main": "index.js",
+  "engines": {
+    "node": "10"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "description": "laflalala",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlq05/Proyecto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlq05/Proyecto/issues"
+  },
+  "homepage": "https://github.com/jlq05/Proyecto#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.4.0"
+  }
 }
