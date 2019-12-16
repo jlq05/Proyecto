@@ -16,13 +16,15 @@ if(e.keyCode == "32"){
 
 var imgBruja;
 var ImgBat;
-
+var ImgMago;
 
 function cargarImagenes() {
     imgBruja = new Image();
     ImgBat = new Image();
+    ImgMago = new Image();
     imgBruja.src = "./img/batman.png";
     ImgBat.src = "./img/calavera.png";
+    ImgMago.src = "./img/mago.png";
 }
 
 var ancho = 1180;
@@ -37,15 +39,17 @@ ctx = canvas.getContext("2d");
 cargarImagenes();
 }
 
+
 function borrarCanvas(){
    canvas.width = ancho;
    canvas.height = alto;
 }
 var suelo = 423;
-var bruja = {y: suelo, vy:0, gravedad:0.6, salto:17, vymax:9, saltando: false};
+var bruja = {y: suelo, vy:0, gravedad:0.6, salto:10, vymax:9, saltando: false};
 var nivel = {velocidad: 30,  muerto: false};
 var puntuacion = 0;
 var bat = {x:ancho + 100, y: suelo-0};
+var mago = {x:ancho + 1100, y: suelo-10};
 
 
 
@@ -59,6 +63,10 @@ function dibujarBat () {
 ctx.drawImage(ImgBat,0,0,75,48,bat.x,bat.y,65,45);
 }
 
+function dibujarMago () {
+ctx.drawImage(ImgMago,0,0,75,48,mago.x,mago.y,65,45);
+}
+
 function logicaBat(){
    if(bat.x < -100){
        bat.x = ancho +100;
@@ -69,6 +77,15 @@ function logicaBat(){
    }
 }
 
+function logicaMago(){
+    if(mago.x < -100){
+        mago.x = ancho +87;
+      puntuacion++;
+    }
+    else{
+        mago.x -= nivel.velocidad;
+    }
+ }
 
 function saltar(){
     bruja.saltando = true;
@@ -100,8 +117,18 @@ if(bat.x >= 100 && bat.x <= 165){
       
   }
 }
-
 }
+
+function colision2(){
+   
+    if(mago.x >= 100 && mago.x <= 165){
+      if(bruja.y >= suelo) {
+          nivel.muerto = true;
+          nivel.velocidad = 0;
+          
+      }
+    }
+    }
 
 function puntaje(){
     ctx.font = "30px impact";
@@ -130,7 +157,10 @@ function principal(){
     borrarCanvas();
     gravedad();
     colision();
+    colision2();
+    logicaMago();
     logicaBat();
+    dibujarMago();
     dibujarBat();
     dibujarBruja();
     puntaje();

@@ -26,19 +26,23 @@
 				</form>
 
 				<button id="boton" onclick="inicializar()">Start</button>
+				<button id="boton1" onclick="cargarMusica()"> Musica</button>
+				<button id="boton2" onclick="recargar()">Recargar</button>
 		</header>
 
 		<head>
-			<script src="script.js">
-				var servidor = "https://thegameofbatman.herokuapp.com/"
-				async function obtener_puntuacion(){
-				var respuesta = await fetch(servidor, {
-				method: "GET"})
-				var contenido = await respuesta.text()
+			<script src="musicaJuego.js">
+				//var servidor = "https://thegameofbatman.herokuapp.com/"
+				//async function obtener_puntuacion(){
+				//var respuesta = await fetch(servidor, {
+				//method: "GET"})
+				//var contenido = await respuesta.text()
 
-				console.log(contenido)
-				}
+				//console.log(contenido)
+			//	}
 			</script>
+			<script src="script.js"></script>
+			<script src="actualizar.js"></script>
 		</head>
 
     	<body>

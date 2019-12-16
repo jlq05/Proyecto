@@ -12,12 +12,26 @@
  }
 
 #canvas{
-  background:url(./img/images.jpg);
+  background:url(./img/fondo.gif);
   margin: 40px;
 }
 
 #boton{
 
-  margin: -50px 1000px;
-  align-items: center;
+  margin: -40px 980px;
+  align-items: left;
 }
+
+#boton1{
+
+  margin: -40px 910px;
+  align-items: left;
+}
+
+#boton2{
+
+  margin: -40px 820px;
+  align-items: left;
+}
+
+

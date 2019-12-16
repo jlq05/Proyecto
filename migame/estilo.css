@@ -50,5 +50,18 @@ body{
     margin: 160px 220px;
 }
 
+#boton1{
+    background-color: transparent;
+    display: inline-block;
+    border: 2px solid transparent;
+    padding: 5px 30px;
+    position: relative;
+    margin: -70px -250px;
+    color: white;
+    width: 30px;
+    font-size: 0.5rem;
+}
+
+
 
 
