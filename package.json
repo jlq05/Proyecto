@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jlq05/Proyecto#readme",
   "dependencies": {
+
     "express": "^4.18.2",
     "mongodb": "^3.4.0"
   }
